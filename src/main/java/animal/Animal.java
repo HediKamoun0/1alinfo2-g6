@@ -8,6 +8,18 @@ public class Animal {
     private int age;
     private boolean vaccinated;
 
+    public Animal() {
+    }
+
+    public Animal(int id, String name, String type, String gender, int age, boolean vaccinated) {
+        this.id = id;
+        this.name = name;
+        Type = type;
+        this.gender = gender;
+        this.age = age;
+        this.vaccinated = vaccinated;
+    }
+
     public int getId() {
         return id;
     }
@@ -57,5 +69,15 @@ public class Animal {
     }
 
 
-
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", Type='" + Type + '\'' +
+                ", gender='" + gender + '\'' +
+                ", age=" + age +
+                ", vaccinated=" + vaccinated +
+                '}';
+    }
 }
