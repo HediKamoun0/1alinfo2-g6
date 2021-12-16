@@ -1,8 +1,5 @@
 package tn.Animal.Shelter;
 
-//Fedi Testing Conflit.
-//2 methode
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
