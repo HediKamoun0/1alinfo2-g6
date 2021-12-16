@@ -1,4 +1,4 @@
-package tn.Animal.Shelter;
+package animal;
 
 public class Animal {
     private int id;
