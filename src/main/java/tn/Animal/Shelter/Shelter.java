@@ -1,8 +1,7 @@
 package tn.Animal.Shelter;
 
 //Fedi Testing Conflit.
-//Nour testing conflict
-//>>>>>>> testing conflict by Nour
+//2 methode
 
 import java.util.ArrayList;
 import java.util.List;
