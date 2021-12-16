@@ -93,8 +93,10 @@ public class Shelter implements InterfaceShelter{
 	@Override
 	public void getAll() {
 		List <Animal>lst =getLstAnimal();
+		System.out.print(this.name);
+		System.out.println("\n");
 		for (int i = 0; i<lst.size();i++) {
-			System.out.println(lst.get(i).getName() +","+ lst.get(i).getType());
+			System.out.println(lst.get(i));
 		}
 		
 
