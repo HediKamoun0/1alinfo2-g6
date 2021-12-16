@@ -1,7 +1,7 @@
-package tn.Animal.Shelter;
+package animal;
 
 import java.util.List;
-import java.util.Optional;
+
 //Interface created by yassine
 public interface InterfaceShelter {
      void rescue(Animal a);

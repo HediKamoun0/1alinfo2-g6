@@ -1,8 +1,8 @@
-package tn.Animal.Shelter;
+package animal;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
+import java.util.stream.Collectors;
 
 public class Shelter implements InterfaceShelter{
 
@@ -68,7 +68,7 @@ public class Shelter implements InterfaceShelter{
 
 	@Override
 	public void rescue(Animal a) {
-
+	lstAnimal.add(a);
 	}
 
 	@Override
@@ -78,21 +78,41 @@ public class Shelter implements InterfaceShelter{
 
 	@Override
 	public void update(Animal a) {
+		for (Animal B: lstAnimal) {
+			if (B.getId()==a.getId()) {
+				B.setAge(a.getAge());
+				B.setName(a.getName());
+				B.setType(a.getType());
 
-	}
+			}
+			}
+		}
+
+
 
 	@Override
 	public void getAll() {
+		List <Animal>lst =getLstAnimal();
+		System.out.print(this.name);
+		System.out.println("\n");
+		for (int i = 0; i<lst.size();i++) {
+			System.out.println(lst.get(i));
+		}
+		
 
 	}
 
+	// function made by Houssem
 	@Override
 	public List<Animal> getByType(String s) {
-		return null;
+		return lstAnimal.stream().filter(a->a.getType().equals(s)).collect(Collectors.toList());
 	}
 
+	//Vaccinated method by Fedi
 	@Override
 	public void vaccinate(Animal a) {
-
+		for(Animal animal: lstAnimal)
+			if (!animal.isVaccinated())
+				animal.setVaccinated(true);
 	}
 }
